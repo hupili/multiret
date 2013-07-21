@@ -8,5 +8,6 @@ setup(name='hupili',
       author='Pili Hu',
       author_email='me@hupili.net',
       url='https://github.com/hupili/multiret',
+      package_dir = {'': 'src'},
       py_modules=['multiret']
      )
