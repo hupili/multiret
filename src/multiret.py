@@ -16,11 +16,11 @@ def multi(func):
         frame, filename, line_number, function_name, lines, index = \
             inspect.getouterframes(inspect.currentframe())[1]
         call_str = lines[0].strip()
-        print 'call_str:', call_str
+        #print 'call_str:', call_str
         ret = re.search(mypattern, call_str)
         if ret:
             expected_vars = map(str.strip, ret.groups()[0].split(','))
-            print expected_vars
+            #print expected_vars
         else:
             expected_vars = ['x']
         returned_vars = func(*args, **kwargs)
