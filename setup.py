@@ -2,8 +2,8 @@
 
 from distutils.core import setup
 
-setup(name='hupili',
-      version='0.0.0',
+setup(name='multiret',
+      version='0.0.1',
       description='multi-value-return pattern in Python',
       author='Pili Hu',
       author_email='me@hupili.net',
