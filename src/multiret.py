@@ -5,6 +5,11 @@ import re
 PATTERN_MULTI_RETURN = r'(\w+(\s*,\s*\w+)*)\s*=\s*%s'
 
 def multi(func):
+    '''
+    This decorator makes a function able to return multiple variables.
+
+    How many variables the client get depends on the caller's pattern.
+    '''
     @wraps(func)
     def wrapped_func(*args, **kwargs):
         mypattern = PATTERN_MULTI_RETURN % func.__name__
